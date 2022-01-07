@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Northcap University Year Book</title></head>
+<body>
+<center>
+        <%
+        if (request.getParameter("msg") != null) {%>
+        <script>alert('Success..!');</script> 
+        <%}%>
+        <%
+        if (request.getParameter("m1") != null) {%>
+        <script>alert('Failed..!');</script> 
+        <%}%>
+    
+    <!-- Main Header -->
+    <header class="main-header">
+        <center><h1>The Northcap University Year Book</h1></center>
+    </header>
+    <!-- Dropdown Navbar -->
+    <nav>
+       
+            <a href="adminhome.jsp">Home</a>
+           
+           
+    </nav>
+    <!-- Login Form -->
+    <div class="form-div animated flip">
+        <h2>Add Achievements</h2>
+        <form action="addsachievementsact.jsp" method="post">
+        <br>
+        
+        <select name="year" id="" required="">
+        <option value="">--Select Year--</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        </select>
+        <br>
+        <input type="text" placeholder="Roll No" name="rno" required="" autocomplete="off">
+        <br>
+        <input type="text" placeholder="Name" name="username" required="" autocomplete="off">
+        <br>
+        <select name="branch" id="" required="">
+        <option value="">--Select Branch--</option>
+        <option value="CSE">CSE</option>
+        <option value="Civil">Civil</option>
+        <option value="Mech">Mech</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        </select>
+        <br>
+        <input type="text" placeholder="Enter Achievements" name="ach" required="" autocomplete="off">
+        <br>
+        <br>
+        <input type="submit" value="ADD">
+        <br>
+        <br>
+        </form>
+    </div>
+    <br> <a href="logout.jsp">Logout</a>
+    </center>
+</body>
+
+</html>
